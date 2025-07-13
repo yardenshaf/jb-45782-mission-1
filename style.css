@@ -1,0 +1,22 @@
+body {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 15px;
+  text-align: center; 
+}
+
+
+form#shopping-form {
+  display: inline-block; 
+  text-align: left;      
+}
+
+img {
+  max-width: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+

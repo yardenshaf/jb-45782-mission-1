@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdV20.00zj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+
+</head>
+
+<body>
+    <h2>Add Product</h2>
+    <form id='shopping-form' onsubmit="addProduct(event)">
+        <label>Product Name</label>
+        <input id="name" required>
+        <br><br>
+        <label>Product Price</label>
+        <input id='price' type="number" min="0" max="999" required>
+        <br><br>
+        <label>Product Category</label>
+        <select id="category" required>
+            <option value="" disabled selected>Choose a Category</option>
+            <option>Drinks</option>
+            <option>Meat</option>
+            <option>Dairy</option>
+            <option>Snacks</option>
+            <option>Basic</option>
+        </select>
+        <br><br>
+        <label>Product Image</label>
+        <input type="url" id="image" required>
+        <br><br>
+        <button class="btn btn-primary">Add Product</button>
+    </form>
+    <button class="btn btn-danger" onclick="deleteAll()">Delete All</button>
+    <br><br>
+    <h2>My Cart</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="shopping-cart">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
